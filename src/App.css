@@ -1,0 +1,30 @@
+/* Header/Footer */
+.header {
+  background: #2c3e50;
+  padding: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 2rem;
+}
+
+.footer {
+  background: #2c2c2c;
+  color: white;
+  padding: 2rem;
+}
+
+/* Home Page */
+.hero-section {
+  text-align: center;
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.deal-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
