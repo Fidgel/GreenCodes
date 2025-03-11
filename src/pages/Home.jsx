@@ -12,8 +12,8 @@ const Home = () => {
     navigate('/top-deals');
   };
 
-  // Get the first 4 products for the homepage
-  const featuredProducts = productData.slice(0, 4);
+  // Use all products instead of just the first 4
+  // const featuredProducts = productData.slice(0, 4);
 
   return (
     <>
@@ -32,7 +32,7 @@ const Home = () => {
       </button>
       
       <div className="card-container">
-        {featuredProducts.map(product => (
+        {productData.map(product => (
           <Card 
             key={product.id}
             image={product.image}

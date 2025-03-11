@@ -1,53 +1,56 @@
-import React from 'react';
-import '../styles/Card.css'; // Ensure this path is correct
+import React, { useState } from 'react';
+import '../styles/Card.css';
 
-const Card = ({ children, image, title, description, price, discountPrice, discount, affiliateLink }) => {
-  // For affiliate products
-  if (affiliateLink) {
-    return (
-      <div className="card product-card">
-        <a href={affiliateLink} target="_blank" rel="noopener noreferrer" className="card-link">
-          {/* Ensure image is rendered with fallback handling */}
-          {image && (
-            <img 
-              src={image} 
-              alt={title || "Product"} 
-              className="card-image" 
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = 'https://via.placeholder.com/300x200?text=Product+Image';
-              }}
-            />
-          )}
-          
-          {discount && <div className="discount-badge">{discount}</div>}
-          
-          <div className="card-content">
-            {title && <h3 className="card-title">{title}</h3>}
-            {description && <p className="card-description">{description}</p>}
-            
-            {(price || discountPrice) && (
-              <div className="price-container">
-                {price && <span className="original-price">{price}</span>}
-                {discountPrice && <span className="sale-price">{discountPrice}</span>}
-              </div>
-            )}
-            
-            <button className="view-deal-button">View Deal</button>
-          </div>
-        </a>
-      </div>
-    );
-  }
+const Card = ({ image, title, description, price, discountPrice, discount, affiliateLink }) => {
+  const [expanded, setExpanded] = useState(false);
   
-  // Standard card (non-affiliate)
+  // Get first part of description for preview
+  const getDescriptionPreview = (desc) => {
+    if (!desc) return '';
+    // If description contains bullet points
+    if (desc.includes('【') || desc.includes('•')) {
+      const firstPoint = desc.split(/【.*?】|•/)[0];
+      return firstPoint.length > 100 ? firstPoint.substring(0, 100) + '...' : firstPoint;
+    }
+    // Regular description
+    return desc.length > 100 ? desc.substring(0, 100) + '...' : desc;
+  };
+
   return (
-    <div className="card">
-      {image && <img src={image} alt={title || "Image"} className="card-image" />}
+    <div className="product-card">
+      <div className="card-image-container">
+        <img src={image} alt={title} className="card-image" />
+      </div>
+      
       <div className="card-content">
-        {title && <h3 className="card-title">{title}</h3>}
-        {description && <p className="card-description">{description}</p>}
-        {children}
+        <h3 className="card-title">{title}</h3>
+        
+        <div className="card-description">
+          <p>{expanded ? description : getDescriptionPreview(description)}</p>
+          {description && description.length > 100 && (
+            <button 
+              className="read-more-btn" 
+              onClick={() => setExpanded(!expanded)}
+            >
+              {expanded ? 'Read Less' : 'Read More'}
+            </button>
+          )}
+        </div>
+        
+        <div className="card-price">
+          {price && <p className="original-price">{price}</p>}
+          {discountPrice && <p className="discount-price">{discountPrice}</p>}
+          {discount && <span className="discount-badge">{discount}</span>}
+        </div>
+        
+        <a 
+          href={affiliateLink} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="buy-button"
+        >
+          View on Amazon
+        </a>
       </div>
     </div>
   );

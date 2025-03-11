@@ -1,82 +1,83 @@
+// Generated on 11.3.2025
 export const productData = [
   {
-    id: 1,
-    title: "KOORUI 24 Zoll Curved Gaming Monitor, FHD 1080p, 1ms Reaktionszeit,180Hz Bildwiederholraten, HDMI 2.0/DP 1.2, 250cd/m² Helligkeit ",
-    description: "Elektrische Rollos und Vorhänge mit Smart Home Integration",
-    image: "https://m.media-amazon.com/images/I/71BCJbGg6pL._AC_SL1500_.jpg",
-    price: "€191,59",
-    discountPrice: "€121,00",
-    discount: "37% OFF",
-    affiliateLink: "https://amzn.to/4bDsb16"
+    "id": 1,
+    "title": "MSI Cyborg 15 Gaming Laptop, 15,6\" Full HD 144Hz, Intel Core i7-13620H, NVIDIA GeForce RTX 4060, 16GB DDR5, 512GB SSD, Windows 11 Home, QWERTZ Tastatur, A13VF-862, Schwarz/transparent",
+    "description": "Der performante Intel Core i7-13620H Prozessor und die starke GeForce RTX 4060 Grafik bringen den entscheidenden Vorteil in kybernetischen Fights.",
+    "image": "https://m.media-amazon.com/images/I/714BoTz13HL._AC_SX569_.jpg",
+    "price": "1.309,92€",
+    "discountPrice": "906,55€",
+    "discount": "",
+    "affiliateLink": "https://amzn.to/41UXktA"
   },
   {
-    id: 2,
-    title: "COSORI Heißluftfritteuse 4,7L",
-    description: "Airfryer mit 9 Programmen, 75% weniger Fett",
-    image: "https://m.media-amazon.com/images/I/71oD0a-eiML._AC_SL1500_.jpg",
-    price: "€119,99",
-    discountPrice: "€89,99",
-    discount: "25% OFF",
-    affiliateLink: "https://www.amazon.de/gp/product/B0DYF1WMN2?smid=A1W93GRS1PIKRR&th=1&linkCode=ll1&tag=greencodes-20&linkId=278722f8c0124cbbed7cd3741cdce0fe&language=de_DE&ref_=as_li_ss_tl"
+    "id": 2,
+    "title": "LG OLED65C47LA TV 65\" (165 cm) OLED evo Fernseher (α9 Gen7 4K AI-Prozessor, webOS 24, Dolby Vision, bis zu 120Hz) [Modelljahr 2024]",
+    "description": "4K OLED evo TV mit Brightness Booster für hellere, brillante Bilder, perfektes Schwarz und satte Farben",
+    "image": "https://m.media-amazon.com/images/I/81767AJb5tL._AC_SX679_.jpg",
+    "price": "3.225,89€",
+    "discountPrice": "1.612,44€",
+    "discount": "50% OFF",
+    "affiliateLink": "https://amzn.to/3FbfnTt"
   },
   {
-    id: 3,
-    title: "Philips OneBlade 360 Rasierer",
-    description: "Präzisionstrimmer, Wet & Dry-Anwendung",
-    image: "https://m.media-amazon.com/images/I/71Mp1XRo5nL._AC_SL1500_.jpg",
-    price: "€44,99",
-    discountPrice: "€31,99",
-    discount: "29% OFF",
-    affiliateLink: "https://www.amazon.de/gp/product/B0DBYNBNK2?smid=A3K0M42L5CHYRT&th=1&linkCode=ll1&tag=greencodes-20&linkId=b19a7dc279576bf3bba80b25de04548c&language=de_DE&ref_=as_li_ss_tl"
+    "id": 3,
+    "title": "LEFANT M1G Saugroboter mit Wischfunktion,LiDAR Navigation, 4000Pa Staubsauger Roboter 200Min, Mehrstufiges Mapping, mit No-Go-Zonen, Saug und Wischroboter für Tierhaare, Teppiche und Hartböden",
+    "description": "【360°LiDAR-Navigation】: Mit hochpräziser Lasernavigation und Freemove 3.0-Multisensor-Fusionsalgorithmus kann der Lefant M1 Staubsauger Roboter Hindernisse gezielt vermeiden und effizientere Routen planen. Für eine gründliche Reinigung bewegt sich der M1 Wisch/Saugroboter mühelos durch Ihren Raum.",
+    "image": "https://m.media-amazon.com/images/I/61g33ol-0iL._AC_SX679_.jpg",
+    "price": "429,99€",
+    "discountPrice": "169,99€",
+    "discount": "60% OFF",
+    "affiliateLink": "https://amzn.to/3XGdSmF"
   },
   {
-    id: 4,
-    title: "BOSCH Akkuschrauber IXO",
-    description: "7. Generation, mit USB-C Ladekabel und 10 Bits",
-    image: "https://m.media-amazon.com/images/I/71pYsGlvwhL._AC_SL1500_.jpg",
-    price: "€60,95",
-    discountPrice: "€49,95",
-    discount: "18% OFF",
-    affiliateLink: "https://www.amazon.de/gp/product/B0DF7P84YT?smid=A3AJKG96RBPOWT&th=1&linkCode=ll1&tag=greencodes-20&linkId=2e761b3be8859575f1c2ce625f8aa550&language=de_DE&ref_=as_li_ss_tl"
+    "id": 4,
+    "title": "Jumoking Schreibtischlampe LED Dimmbar Augenschutz,Desk Lamp mit 5 Farben und 5 Helligkeitsstufen,Tischlampemit USB Ladeanschluss Touch Steuerung für Kinder, Schlafzimmer, Lektüre, Büros (White)",
+    "description": "🌟 Flexibel einstellbare Beleuchtung Unsere Schreibtischlampe bietet fünf verschiedene Farbmodi und fünf Helligkeitsstufen. Ob für konzentriertes Arbeiten, Lesen oder Entspannen, die dimmbare LED Tischlampe passt sich perfekt Ihren Bedürfnissen an und sorgt für die ideale Beleuchtung. Diese Tischlampen im minimalistischem design ist ideal für Erwachsene und Kinder.",
+    "image": "https://m.media-amazon.com/images/I/61MwQueDZaL._AC_SX679_.jpg",
+    "price": "36,29€",
+    "discountPrice": "17,14€",
+    "discount": "53% OFF",
+    "affiliateLink": "https://amzn.to/3DD1iOc"
   },
   {
-    id: 5,
-    title: "Fire TV Stick 4K Max",
-    description: "Streaming-Gerät mit Wi-Fi 6E, Alexa-Sprachfernbedienung",
-    image: "https://m.media-amazon.com/images/I/51PXswKw0rL._AC_SL1000_.jpg",
-    price: "€74,99",
-    discountPrice: "€44,99",
-    discount: "40% OFF",
-    affiliateLink: "https://www.amazon.de/gp/product/B0D83LWKZJ?smid=ASHL3R3DECL6A&th=1&linkCode=ll1&tag=greencodes-20&linkId=f4e9f7ca0cf9b8a7d3beffc4fce12377&language=de_DE&ref_=as_li_ss_tl"
+    "id": 5,
+    "title": "AY Tragbarer Bluetooth Lautsprecher mit Licht, Musikbox Bluetooth mit Leistungsstarker Kristallklarer Klang, IPX5 Wasserdicht,AUX&TF-Karteneingang, Stereo-Paarung, 24h Akku Perfekt für Zuhause,Draußen",
+    "description": "【Fesselnder Klang】: Erleben Sie atemberaubenden 15W（20W peak) Sound in einem kompakten Design. Mit verzerrungsfreiem Audio liefert dieser Bluetooth Lautsprecher laute Höhen, knackige Mitten und volle Bässe für ein beeindruckendes Hörerlebnis. Mit bis zu 15 Stunden Spielzeit mit einer einzigen Ladung können Sie Ihre Lieblingssongs den ganzen Tag und die ganze Nacht ohne Unterbrechung genießen.",
+    "image": "https://m.media-amazon.com/images/I/81t8YwCFIdL._AC_SX569_.jpg",
+    "price": "40,33€",
+    "discountPrice": "20,15€",
+    "discount": "50% OFF",
+    "affiliateLink": "https://amzn.to/4kCYD7N"
   },
   {
-    id: 6,
-    title: "Echo Dot (5. Gen., 2022)",
-    description: "Smarter Lautsprecher mit Alexa, besserer Klang",
-    image: "https://m.media-amazon.com/images/I/71+VRvsgtGL._AC_SL1000_.jpg",
-    price: "€64,99",
-    discountPrice: "€34,99",
-    discount: "46% OFF",
-    affiliateLink: "https://www.amazon.de/gp/product/B0D7N1BPNV?smid=A23R8XU9UYU5MY&psc=1&linkCode=ll1&tag=greencodes-20&linkId=8b3b2c411ccfc1ab600efe31ec5c641d&language=de_DE&ref_=as_li_ss_tl"
+    "id": 6,
+    "title": "EA SPORTS FC 25 Standard Edition | Xbox One/Series X|S - Download Code",
+    "description": "Dieses Videospiel ist das erste Fußball-Videospiel der Welt.",
+    "image": "https://m.media-amazon.com/images/I/71AfGsgnNyL._SY679_.jpg",
+    "price": "80,66€",
+    "discountPrice": "24,19€",
+    "discount": "70% OFF",
+    "affiliateLink": "https://amzn.to/3FjgXmm"
   },
   {
-    id: 7,
-    title: "Fire TV Stick mit Alexa-Sprachfernbedienung",
-    description: "HD-Streaming-Gerät, einfache Bedienung",
-    image: "https://m.media-amazon.com/images/I/51KvlJOQmWL._AC_SL1000_.jpg",
-    price: "€44,99",
-    discountPrice: "€24,99",
-    discount: "44% OFF",
-    affiliateLink: "https://www.amazon.de/gp/product/B07ML1V773?smid=A3JWKAKR8XB7XF&th=1&linkCode=ll1&tag=greencodes-20&linkId=48cd5898ddff39f91318740215adb8a3&language=de_DE&ref_=as_li_ss_tl"
+    "id": 7,
+    "title": "ASUS Chromebook Plus CX34 Laptop | 14\" Full-HD 16:9 IPS Display | Intel Core i3-1215U | 8 GB RAM | 128GB UFS | Intel UHD Graphics | ChromeOS | QWERTZ Tastatur | Rocky Grey",
+    "description": "Mit dem Kauf eines Chromebook Plus erhältst du für 12 Monate das Google One AI Premium-Abo, das Zugang zu Gemini Advanced, 2 TB Cloud-Speicher und mehr. Weitere Informationen zur Aktion findest du unter: one.google.com/offer/terms-and-conditions/chromebookplus",
+    "image": "https://m.media-amazon.com/images/I/61uauugBYYL._AC_SX569_.jpg",
+    "price": "452,77€",
+    "discountPrice": "281,34€",
+    "discount": "38% OFF",
+    "affiliateLink": "https://amzn.to/3FiZdri"
   },
   {
-    id: 8,
-    title: "Echo Show 5 (3. Gen.)",
-    description: "Smart Display mit Alexa und verbesserten Lautsprechern",
-    image: "https://m.media-amazon.com/images/I/71lBxmfswmL._AC_SL1500_.jpg",
-    price: "€109,99",
-    discountPrice: "€59,99",
-    discount: "45% OFF",
-    affiliateLink: "https://www.amazon.de/gp/product/B0C23M7Y9V?smid=A3JWKAKR8XB7XF&th=1&linkCode=ll1&tag=greencodes-20&linkId=005d62e2b0bcbdcc437f2f46c4fcdb87&language=de_DE&ref_=as_li_ss_tl"
+    "id": 8,
+    "title": "KOORUI 24 Zoll Curved Gaming Monitor, FHD 1080p, 1ms Reaktionszeit,180Hz Bildwiederholraten, HDMI 2.0/DP 1.2, 250cd/m² Helligkeit",
+    "description": "Immersive 1500R Krümmung: Der KOORUI 24 zoll gaming monitor bietet ein beeindruckendes 1500R gekrümmtes Display, das Sie tief in Ihr Spielerlebnis eintauchen lässt; Die sanfte Krümmung sorgt für ein fesselndes und realistisches Seherlebnis",
+    "image": "https://m.media-amazon.com/images/I/71BCJbGg6pL._AC_SX569_.jpg",
+    "price": "191,59€",
+    "discountPrice": "121,00€",
+    "discount": "37% OFF",
+    "affiliateLink": "https://amzn.to/3XE7Xi0"
   }
 ];

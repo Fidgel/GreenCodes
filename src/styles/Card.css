@@ -46,14 +46,13 @@
 
 /* Card container with 2-column layout */
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px; /* Increased spacing between cards */
-  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller min width */
+  gap: 15px; /* Reduced from 25px to 15px */
+  padding: 15px; /* Slightly smaller padding */
   width: 100%;
   max-width: 1200px;
-  padding: 0;
+  margin: 0 auto;
 }
 
 .card-container .card {
@@ -65,9 +64,8 @@
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .card-container {
-    gap: 30px;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller for tablets */
+    gap: 12px; /* Even smaller gap on tablets */
   }
   
   .card-container .card {
@@ -84,7 +82,8 @@
   }
   
   .card-container {
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Smaller for phones */
+    gap: 10px; /* Smallest gap on mobile */
   }
   
   .card-image {
@@ -93,6 +92,134 @@
 }
 
 /* Add these new styles for affiliate products */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 200px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #333;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #006064;
+  font-size: 14px;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.read-more-btn:hover {
+  color: #00838f;
+}
+
+.card-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.original-price {
+  font-size: 16px;
+  text-decoration: line-through;
+  color: #888;
+  margin: 0;
+}
+
+.discount-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d32f2f;
+  margin: 0;
+}
+
+.discount-badge {
+  background-color: #d32f2f;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.buy-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #388e3c;
+}
 
 .product-card {
   position: relative;
