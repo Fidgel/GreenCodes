@@ -1,0 +1,50 @@
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  gap: 30px; /* Space between icons */
+  padding: 0.5rem;
+}
+
+.social-icon-header {
+  color: #00cc00; /* Light green color */
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon-header:hover {
+  color: #ffffff; /* White on hover */
+  transform: translateY(-3px);
+  text-shadow: 0 0 10px rgba(0, 204, 0, 0.7);
+}
+
+/* Custom styling for Threads icon since it might not have a FontAwesome icon */
+.threads-icon {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .social-icons-container {
+    margin: 0.5rem auto;
+    gap: 25px;
+  }
+  
+  .social-icon-header {
+    font-size: 1.3rem;
+  }
+  
+  .threads-icon {
+    font-size: 1.5rem;
+  }
+}

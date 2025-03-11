@@ -1,24 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './styles/App.css';
 import Home from './pages/Home';
-import About from './pages/About';
+import TopDailyDeals from './pages/TopDailyDeals';
+import AboutUs from './pages/AboutUs';
 import Disclaimer from './pages/Disclaimer';
+import Layout from './components/Layout';
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-      <main className="main-content">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/top-deals" element={<TopDailyDeals />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+      </Routes>
+    </Layout>
   );
 };
 

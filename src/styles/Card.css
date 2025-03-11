@@ -1,0 +1,162 @@
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  height: 315px; /* 30% smaller than original 450px */
+  max-width: 315px; /* 30% smaller than original 450px */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px; /* Slightly smaller padding */
+  flex-grow: 1; /* Allow content to expand */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.3rem; /* Slightly smaller */
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.card-description {
+  font-size: 0.9rem; /* Slightly smaller */
+  color: #666;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* Card container with 2-column layout */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Increased spacing between cards */
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.card-container .card {
+  flex: 0 0 calc(50% - 40px); /* Two columns with 40px gap */
+  max-width: 315px; /* Control maximum width */
+  margin: 10px 0;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .card-container {
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-container .card {
+    flex: 0 0 auto; /* Reset flex property */
+    width: 90%; /* Use percentage width instead */
+    max-width: 315px; /* Control maximum width */
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    height: 280px; /* Even smaller on mobile */
+  }
+  
+  .card-container {
+    gap: 20px;
+  }
+  
+  .card-image {
+    height: 140px;
+  }
+}
+
+/* Add these new styles for affiliate products */
+
+.product-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4500;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.sale-price {
+  color: #006600;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.view-deal-button {
+  background-color: #006600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.view-deal-button:hover {
+  background-color: #004d00;
+}

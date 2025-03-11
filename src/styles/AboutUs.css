@@ -1,0 +1,176 @@
+/* Add to the top of AboutUs.css */
+/* filepath: /Users/fidgel/Desktop/Fidgel-files/websites/GreenCodes/src/styles/AboutUs.css */
+
+/* Logo and title styling - completely separate from card styles */
+.about-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 1.5rem; /* Reduced from 2rem */
+  padding-bottom: 0.5rem; /* Reduced from 1rem */
+}
+
+/* Use the existing logo-icon class from App.css */
+.about-logo-container .logo-icon {
+  max-width: 100%;
+  height: auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+  border: 3px solid rgba(0, 204, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 204, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Use the existing title class from App.css */
+.about-logo-container .title {
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 150, 0, 0.5);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Mobile adjustments for logo area only */
+@media screen and (max-width: 768px) {
+  .about-logo-container .logo-icon {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .about-logo-container .title {
+    font-size: 2rem;
+  }
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: auto; /* Changed from 80vh to auto */
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 0.5rem; /* Add small top margin */
+}
+
+.about-container .card {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  color: #006600; /* Dark green color for text */
+}
+
+.about-container .card-title {
+  color: #004d00; /* Slightly darker green for the title */
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #006600; /* Dark green color for text */
+  margin: 0;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .about-container {
+    padding: 10px;
+    min-height: auto;
+    margin-top: 1rem; /* Reduced from 2rem */
+    margin-bottom: 2rem;
+  }
+  
+  .about-container .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-container p {
+    font-size: 1rem;
+  }
+}
+
+/* Clean up: Remove duplicate styles and focus on the class we're actually using */
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px; /* Make it wider but not too wide */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  box-sizing: border-box; /* Critical - makes sure padding doesn't cause overflow */
+}
+
+/* Logo styling */
+.about-us-container .logo-container {
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Card styling - override Card.css defaults */
+.about-us-container .card {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  padding: 2.5rem !important; /* Use !important to ensure this overrides any other padding */
+  box-sizing: border-box; /* Critical for proper sizing */
+  overflow: visible; /* Ensure content isn't cut off */
+}
+
+/* Card title styling */
+.about-us-container .card-title {
+  font-size: 2rem;
+  color: #006600;
+  margin-bottom: 1.5rem !important;
+  padding-bottom: 0.5rem;
+}
+
+/* Text styling with proper spacing */
+.about-us-container p {
+  color: #333;
+  margin-bottom: 1.5rem !important; /* Force spacing between paragraphs */
+  line-height: 1.8;
+  font-size: 1.2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  max-width: 100%; /* Prevent text from extending beyond card */
+  overflow-wrap: break-word; /* Break long words if needed */
+  padding-bottom: 0.5rem; /* Extra space at paragraph bottom */
+}
+
+/* Last paragraph gets extra bottom margin to prevent cutoff */
+.about-us-container p:last-child {
+  margin-bottom: 0.5rem !important;
+  padding-bottom: 1rem;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .about-us-container {
+    padding: 1rem 0.7rem;
+  }
+  
+  .about-us-container .card {
+    padding: 1.5rem !important;
+  }
+  
+  .about-us-container p {
+    font-size: 1.1rem;
+  }
+}

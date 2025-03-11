@@ -1,24 +1,27 @@
-import { FaTiktok, FaInstagram, FaTwitter, FaTelegram, FaThreads } from 'react-icons/fa';
+import React from 'react';
+import { FaInstagram, FaTwitter, FaTelegram, FaTiktok } from 'react-icons/fa';
+import '../styles/Footer.css';
 import { Link } from 'react-router-dom';
 
-const Footer = () => (
-  <footer className="footer">
-    <div className="footer-container">
-      <div className="footer-left">
-        <h3>GreenCodes</h3>
-        <div className="footer-links">
-          <Link to="/">Top Daily Deals</Link>
-          <Link to="/about">About Us</Link>
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="footer-inner">
+        <div className="footer-left">
+          <Link to="/" className="footer-logo">GreenCodes</Link>
+        </div>
+        <div className="footer-center">
+          <Link to="/top-deals" className="footer-button">Top Daily Deals</Link>
+        </div>
+        <div className="footer-right">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaInstagram /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaTwitter /></a>
+          <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="social-icon"><FaTelegram /></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaTiktok /></a>
         </div>
       </div>
-      <div className="footer-right">
-        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-          <FaTiktok />
-        </a>
-        {/* Add other social media icons here */}
-      </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;

@@ -1,0 +1,211 @@
+@keyframes wave1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes wave2 {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes wave3 {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes wave4 {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, #024d02, #00cc00,#55ff55 ,#024d02, #00cc00),
+    linear-gradient(135deg, #024d02, #00cc00,#55ff55 ,#024d02, #00cc00),
+    linear-gradient(135deg, #024d02, #00cc00,#55ff55 ,#024d02, #00cc00),
+    linear-gradient(135deg, #024d02, #00cc00,#55ff55 ,#024d02, #00cc00);
+  background-size: 400% 400%;
+  animation: wave1 15s ease infinite, wave2 20s ease infinite, wave3 25s ease infinite, wave4 30s ease infinite;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0,255,150,0.1) 0%, rgba(0,100,50,0.3) 100%);
+  z-index: -1;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  margin-top: 80px; /* Adjust this value to match the height of your navbar */
+  margin-bottom: 80px; /* Ensure there is space for the footer */
+}
+
+/* Logo styles */
+.logo-container {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.logo-icon {
+  max-width: 100%;
+  height: auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%; /* Makes the container circular */
+  object-fit: cover; /* Ensures the image fills the circle */
+  background-color: white; /* Optional: adds a white background */
+  border: 3px solid rgba(0, 204, 0, 0.3); /* Optional: adds a light green border */
+  box-shadow: 0 0 20px rgba(0, 204, 0, 0.2); /* Optional: adds a subtle green glow */
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 200, 0, 0.5);
+}
+
+/* Button styles */
+.button {
+  background-color: rgba(0, 180, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: background-color 0.3s, transform 0.2s;
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
+  overflow: hidden; /* Hide overflow */
+  max-width: 100%; /* Ensure button doesn't exceed container width */
+}
+
+.button:hover {
+  background-color: #004d00; /* Dark green hover state */
+  transform: translateY(-2px);
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .card-container {
+    gap: 15px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 0.9rem; /* Slightly smaller font size on mobile */
+    padding: 0.7rem 1rem; /* Reduced padding on mobile */
+    min-width: 0; /* Allow button to be smaller than any minimum width */
+    width: auto; /* Let button size to content */
+    height: auto; /* Allow height to adjust */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    font-size: 0.85rem; /* Even smaller font on very small screens */
+    width: auto; /* Allow button to size to content */
+    max-width: 90%; /* Prevent overflow */
+  }
+}
+
+/* Even smaller screens */
+@media screen and (max-width: 380px) {
+  .button {
+    font-size: 0.8rem; /* Even smaller font */
+    padding: 0.6rem 0.8rem; /* Further reduced padding */
+  }
+}
+

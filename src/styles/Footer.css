@@ -1,0 +1,102 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* Make the background 100% transparent */
+  color: white;
+  padding: 5px;
+  width: 100%;
+  z-index: 3;
+  box-sizing: border-box;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust this value as needed */
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-button {
+  background-color: rgba(0, 180, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.footer-button:hover {
+  color: #004d00; /* Dark green hover state */
+}
+
+.social-icon {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #004d00; /* Same green color as other hover effects */
+}
+
+.footer-logo {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-logo:hover {
+  color: #004d00; /* Light green for text hover */
+}
+
+@media screen and (max-width: 768px) {
+  .footer,
+  .footer-inner,
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    display: none !important;
+  }
+  
+  /* Add padding at the bottom of the main content to compensate for missing footer */
+  main, 
+  .app-container, 
+  #root > div {
+    padding-bottom: 2rem;
+  }
+}
+
+.admin-links {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  margin-top: 20px;
+}
+
+.admin-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+}
