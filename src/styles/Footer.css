@@ -51,6 +51,11 @@
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  height: 24px;
 }
 
 .social-icon:hover {
@@ -99,4 +104,20 @@
 
 .admin-link:hover {
   text-decoration: underline;
+}
+
+/* Fix threads icon alignment */
+.threads-icon {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  height: 24px; /* Match the height of other icons */
+  position: relative;
+  top: -1px; /* Fine-tune vertical position */
+  line-height: 1;
+  padding-bottom: 2px; /* Adjust as needed */
 }

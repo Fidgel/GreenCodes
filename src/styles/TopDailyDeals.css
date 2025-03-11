@@ -33,6 +33,22 @@
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   max-height: 200px;
+  max-width: 100%;
+  object-fit: contain !important; /* Force contain */
+}
+
+/* Fix for image cropping on TopDailyDeals page */
+.deals-container .card-image-container {
+  width: 100%;
+  height: auto !important; /* Force auto height */
+  min-height: 180px; 
+  max-height: 300px;
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
 }
 
 /* Ensure all text in cards is readable */
@@ -65,5 +81,25 @@
   
   .deals-container .card-image {
     max-height: 150px;
+  }
+  
+  .deals-container .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .deals-container .product-card {
+    margin: 0 0 15px 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .deals-container .card-container {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }

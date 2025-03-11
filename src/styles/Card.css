@@ -18,10 +18,53 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-image {
+/* Remove conflicting card styles and fix image cropping */
+
+/* ===== CARD BASICS ===== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
   width: 100%;
-  object-fit: cover;
+  max-width: 300px;
+  margin: 0 auto 15px;
+  position: relative;
 }
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== FIX IMAGE CROPPING ===== */
+.card-image-container {
+  width: 100%;
+  height: auto; /* AUTO HEIGHT INSTEAD OF FIXED */
+  min-height: 180px; /* Minimum height */
+  max-height: 300px; /* Maximum height */
+  background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px; /* Add padding inside container instead of on image */
+}
+
+/* This is the important fix - use contain and remove conflicting styles */
+.card-image {
+  max-width: 100%;
+  max-height: 280px; /* Allow taller images */
+  object-fit: contain;
+  display: block; /* Remove any inline spacing */
+}
+
+/* Remove the other .card-image style that uses object-fit: cover */
 
 .card-content {
   padding: 15px; /* Slightly smaller padding */
@@ -48,7 +91,7 @@
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller min width */
-  gap: 15px; /* Reduced from 25px to 15px */
+  gap: 20px; /* Reduced from 25px to 15px */
   padding: 15px; /* Slightly smaller padding */
   width: 100%;
   max-width: 1200px;
@@ -64,8 +107,9 @@
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller for tablets */
-    gap: 12px; /* Even smaller gap on tablets */
+    grid-template-columns: repeat(2, 1fr); /* Force exactly 2 columns */
+    gap: 15px;
+    padding: 10px;
   }
   
   .card-container .card {
@@ -73,6 +117,34 @@
     width: 90%; /* Use percentage width instead */
     max-width: 315px; /* Control maximum width */
     margin: 10px 0;
+  }
+  
+  .product-card {
+    max-width: 100%; /* Allow cards to fill their grid cell */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Force single column on phones */
+    max-width: 90%; /* Center the cards with some margin */
+  }
+  
+  .product-card {
+    max-width: 100%;
+    margin: 0 auto 20px; /* Add spacing between vertically stacked cards */
+  }
+  
+  .card-image-container {
+    min-height: 160px;
+    max-height: 250px;
+  }
+  
+  /* Fix for any legacy card styles */
+  .card {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto; /* Center legacy cards too */
   }
 }
 
@@ -87,7 +159,7 @@
   }
   
   .card-image {
-    height: 140px;
+    max-height: 230px;
   }
 }
 
@@ -113,20 +185,23 @@
 
 .card-image-container {
   width: 100%;
-  height: 200px;
+  height: auto; /* AUTO HEIGHT INSTEAD OF FIXED */
+  min-height: 180px; /* Minimum height */
+  max-height: 300px; /* Maximum height */
   background-color: #f9f9f9;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border-bottom: 1px solid #eaeaea;
+  padding: 10px;
 }
 
 .card-image {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 280px; /* Allow taller images */
   object-fit: contain;
-  padding: 10px;
+  display: block;
 }
 
 .card-content {
@@ -195,12 +270,16 @@
 }
 
 .discount-badge {
-  background-color: #d32f2f;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4500;
   color: white;
-  padding: 3px 8px;
+  padding: 4px 8px;
   border-radius: 4px;
-  font-size: 12px;
   font-weight: bold;
+  font-size: 0.8rem;
+  z-index: 1;
 }
 
 .buy-button {
@@ -286,4 +365,77 @@
 
 .view-deal-button:hover {
   background-color: #004d00;
+}
+
+/* Fix for TopDailyDeals page which might have different container */
+.deals-container .card-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ensure product cards have proper spacing */
+.product-card {
+  margin-bottom: 15px;
+}
+
+/* Fix mobile layout for card containers */
+@media screen and (max-width: 768px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .product-card {
+    margin: 0; /* Remove vertical margins to fix spacing */
+    width: 100%; /* Full width within its grid cell */
+  }
+  
+  .card-image-container {
+    height: 200px; /* Maintain good image size on tablets */
+  }
+}
+
+/* Single column layout for phones */
+@media screen and (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Single column */
+    max-width: 320px; /* Center cards on small screens */
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  
+  .product-card {
+    max-width: 100%; /* Full width of container */
+    margin: 0 0 15px 0; /* Add space between stacked cards */
+  }
+  
+  .card-image-container {
+    min-height: 160px;
+    max-height: 250px;
+  }
+  
+  .card-image {
+    max-height: 230px;
+  }
+  
+  /* Make sure card content fits better */
+  .card-title {
+    font-size: 15px;
+  }
+}
+
+/* Extra small devices (like iPhone SE) */
+@media screen and (max-width: 320px) {
+  .card-container {
+    width: 95%;
+    padding: 5px;
+  }
+  
+  .card-image-container {
+    height: 180px; /* Slightly smaller for very small screens */
+  }
 }
