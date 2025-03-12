@@ -90,10 +90,12 @@
 /* Make the episode content stand out from the header */
 .episode-content {
   background-color: white;
-  max-height: 2000px;
-  transition: all 0.3s ease-in-out;
+  max-height: none; /* Remove max-height limitation */
+  height: auto; /* Allow content to expand naturally */
+  transition: opacity 0.3s ease-in-out;
   padding: 20px 15px;
   border-top: none; /* Remove existing border */
+  overflow: visible; /* Ensure content isn't clipped */
 }
 
 /* Card container styling for the accordion */
@@ -102,6 +104,8 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 10px 0;
+  max-height: none; /* Remove any height constraints */
+  height: auto;
 }
 
 .bottom-message {
@@ -141,6 +145,11 @@
     margin-bottom: 5px;
   }
 
+  .episodes-accordion {
+    width: 92%; /* Slightly narrower for better margins */
+    padding: 0;
+  }
+
   .episode-header {
     padding: 12px 15px;
     font-size: 1rem;
@@ -152,13 +161,54 @@
   }
 }
 
+/* Update mobile styles */
 @media (max-width: 480px) {
-  .episode-content .card-container {
-    grid-template-columns: 1fr;
+  .episodes-accordion {
+    width: 90%; /* Even narrower on phones */
+    max-width: 350px; /* Limit max width */
+    margin: 20px auto;
   }
   
-  .button {
-    width: 90%;
-    max-width: 300px;
+  .episode-section {
+    margin-bottom: 15px;
+  }
+  
+  .episode-header {
+    padding: 10px 15px;
+    font-size: 0.95rem; /* Slightly smaller font */
+  }
+
+  .episode-header svg {
+    min-width: 16px; /* Ensure icon doesn't shrink */
+    margin-left: 10px; /* Add space between title and icon */
+  }
+  
+  .episode-content {
+    padding: 15px 5px; /* Reduce horizontal padding */
+    max-height: none;
+  }
+  
+  .episode-content .card-container {
+    grid-template-columns: 1fr;
+    gap: 25px; /* Increase gap between cards for better separation */
+    padding: 5px 0;
+    width: 100%; /* Ensure full width */
+  }
+  
+  /* Make individual cards more compact on mobile */
+  .episode-content .product-card {
+    margin-bottom: 0; /* Remove extra bottom margin */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .episodes-accordion {
+    width: 95%; /* Wider on tiny screens */
+  }
+  
+  .episode-header {
+    padding: 10px 12px;
+    font-size: 0.9rem;
   }
 }

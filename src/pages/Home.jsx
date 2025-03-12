@@ -85,7 +85,7 @@ const Home = () => {
         })}
       </div>
       
-      <p className="bottom-message">We're building something amazing! Stay tuned for our full website launch.</p>
+      <p className="bottom-message">Stay tuned for more Deals!.</p>
     </>
   );
 };
