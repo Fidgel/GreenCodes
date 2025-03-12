@@ -58,13 +58,14 @@
 
 /* Update Episode Header Styling */
 .episode-header {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the content */
   align-items: center;
   padding: 15px 20px;
   background-color: #f8f8f8; /* Slightly off-white background */
   width: 100%;
-  text-align: left;
+  text-align: center;
   border: none;
   font-size: 1.2rem;
   font-weight: 700;
@@ -74,6 +75,20 @@
   border-left: 4px solid #006600; /* Green accent on left side */
   color: #006600; /* Green text color */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Position the chevron icon on the right side */
+.episode-header svg {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Make text remain centered */
+.episode-header span {
+  /* Add some right padding to balance with the icon on the right */
+  padding-right: 20px;
 }
 
 .episode-header:hover {
@@ -181,6 +196,11 @@
   .episode-header svg {
     min-width: 16px; /* Ensure icon doesn't shrink */
     margin-left: 10px; /* Add space between title and icon */
+    right: 15px;
+  }
+  
+  .episode-header span {
+    padding-right: 15px;
   }
   
   .episode-content {
