@@ -1,0 +1,164 @@
+/* Episode Tabs Styling */
+.episode-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.episode-tab {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.episode-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.episode-tab.active {
+  background-color: #006600;
+  color: white;
+}
+
+/* Make sure cards display nicely */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Episode Accordion Styling */
+.episodes-accordion {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+/* Add spacing between episodes */
+.episode-section {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  /* Remove existing shadow as we added it to the header */
+  background-color: white;
+}
+
+/* Update Episode Header Styling */
+.episode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f8f8f8; /* Slightly off-white background */
+  width: 100%;
+  text-align: left;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 8px;
+  border-left: 4px solid #006600; /* Green accent on left side */
+  color: #006600; /* Green text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.episode-header:hover {
+  background-color: #f2f2f2;
+}
+
+/* When an episode is expanded, change styling but keep green text */
+.episode-header.expanded {
+  background-color: #f0f7f0; /* Very light green background */
+  color: #006600; /* Keep text green when expanded */
+  box-shadow: 0 2px 6px rgba(0, 102, 0, 0.1); /* Green-tinted shadow */
+}
+
+/* Make the episode content stand out from the header */
+.episode-content {
+  background-color: white;
+  max-height: 2000px;
+  transition: all 0.3s ease-in-out;
+  padding: 20px 15px;
+  border-top: none; /* Remove existing border */
+}
+
+/* Card container styling for the accordion */
+.episode-content .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.bottom-message {
+  text-align: center;
+  margin: 30px 0;
+  font-style: italic;
+  color: #666;
+}
+
+/* Button styling */
+.button {
+  background-color: #006600;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 15px 0;
+}
+
+.button:hover {
+  background-color: #004d00;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .episode-tabs {
+    padding: 0 10px;
+  }
+  
+  .episode-tab {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+  }
+
+  .episode-header {
+    padding: 12px 15px;
+    font-size: 1rem;
+  }
+  
+  .episode-content .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .episode-content .card-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .button {
+    width: 90%;
+    max-width: 300px;
+  }
+}

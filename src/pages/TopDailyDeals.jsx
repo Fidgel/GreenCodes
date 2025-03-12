@@ -12,6 +12,9 @@ const TopDailyDeals = () => {
     day: 'numeric'
   });
 
+  // Sort products by ID in descending order (newest first)
+  const sortedProducts = [...productData].sort((a, b) => b.id - a.id);
+
   return (
     <>
       <div className="logo-container">
@@ -27,7 +30,7 @@ const TopDailyDeals = () => {
         </div>
         
         <div className="card-container">
-          {productData.map(product => (
+          {sortedProducts.map(product => (
             <Card 
               key={product.id}
               image={product.image}
