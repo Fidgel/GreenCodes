@@ -1,0 +1,103 @@
+/* InfoCard styling with improved mobile responsiveness */
+
+.info-card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px; /* Remove top margin to position under logo */
+  padding: 0 20px;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.info-card-header {
+  background-color: #f0f7f0;
+  padding: 20px 25px;
+  border-bottom: 1px solid #eaeaea;
+  text-align: center; /* Center the title */
+}
+
+.info-card-header h2 {
+  color: #006600;
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.info-card-content {
+  padding: 25px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info-card-content p {
+  margin-bottom: 16px;
+}
+
+.info-card-content p:last-child {
+  margin-bottom: 0;
+}
+
+.info-card-content strong {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .info-card-container {
+    padding: 0 15px;
+    margin-top: 10px; /* Small space after logo on tablets */
+  }
+  
+  .info-card-header {
+    padding: 15px 20px;
+  }
+  
+  .info-card-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .info-card-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card-container {
+    padding: 0 10px;
+    width: 95%; /* Make slightly narrower for better margins */
+    margin: 5px auto 20px; /* Reduced top margin */
+  }
+  
+  .info-card {
+    max-width: 100%;
+  }
+  
+  .info-card-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .info-card-content {
+    padding: 15px;
+    font-size: 15px;
+  }
+}

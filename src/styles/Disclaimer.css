@@ -1,86 +1,60 @@
+/* Import common styles if there's a shared styles file */
+
+/* Clean, simplified Disclaimer styling */
 .disclaimer-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 80vh;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 20px 0;
 }
 
-.disclaimer-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1.5rem; /* Reduced from 2rem */
-}
-
+/* Match the exact same logo-container from Home page */
 .logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center; /* Ensures text centering */
+  margin-bottom: 20px;
 }
 
+/* Match the exact same logo styling from Home page */
 .logo-icon {
-  display: block; /* Ensures proper block behavior */
-  margin: 0 auto; /* Centers the image horizontally */
-  padding: 0;
-  line-height: 0;
+  max-width: 100%;
+  height: auto;
+  width: 170px; /* Same size as Home page */
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white;
+  border: 3px solid rgba(0, 204, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 204, 0, 0.2);
 }
 
+/* Match the exact same title styling from Home page */
 .title {
   font-size: 2.5rem;
-  color: white;
+  color: white; /* White text like on Home page */
   text-shadow: 0 0 10px rgba(0, 150, 0, 0.5);
-  margin: 0;
-  margin-top: 0.25rem; /* Small space between logo and title */
+  margin-top: 0.25rem;
   text-align: center;
-  width: 100%;
 }
 
-.disclaimer-container .card {
-  width: 100%;
-  max-width: 600px;
-  height: auto; /* Allow card to expand to fit content */
-  color: #006600; /* Dark green color for text */
-}
-
-.disclaimer-container .card-title {
-  color: #004d00; /* Slightly darker green for the title */
-}
-
+/* Content styling */
 .disclaimer-container p {
   font-size: 1rem;
-  margin: 1rem 0; /* More space between paragraphs */
+  margin: 1rem 0;
   line-height: 1.5;
-  color: #006600; /* Dark green color for text */
 }
 
 .disclaimer-container p strong {
-  color: #004d00; /* Slightly darker green for bold text */
-}
-
-.disclaimer-container p:first-of-type {
-  margin-top: 0;
-}
-
-.disclaimer-container p:last-of-type {
-  margin-bottom: 0;
-}
-
-/* Style for the all-caps paragraph */
-.disclaimer-container p:nth-child(7) {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
   .disclaimer-container {
-    padding: 10px;
+    padding: 15px 0;
     min-height: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -96,7 +70,34 @@
   }
   
   .logo-icon {
-    width: 120px !important;
-    height: 120px !important;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .disclaimer-header {
+    margin-bottom: 15px;
+  }
+
+  .disclaimer-container .logo-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .disclaimer-container {
+    padding: 10px 0;
+  }
+  
+  .disclaimer-header {
+    margin-bottom: 10px;
+  }
+  
+  .logo-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
   }
 }

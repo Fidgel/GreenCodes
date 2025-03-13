@@ -1,19 +1,19 @@
 import React from 'react';
-import Card from '../components/Card';
+import InfoCard from '../components/InfoCard';
 import '../styles/Disclaimer.css';
-import logoImage from '../assets/logoGreenCodes1.png';
-import SocialIcons from '../components/SocialIcons'; // Import the component
+import logoImage from '../assets/GREEN.png'; // Changed from GREEN.png to the white logo
+import SocialIcons from '../components/SocialIcons';
 
 const Disclaimer = () => {
   return (
     <div className="disclaimer-container">
       <div className="disclaimer-header">
-        <img src={logoImage} alt="GreenCodes Logo" className="logo-icon" />
+        <img src={logoImage} alt="GreenCodes Logo" className="logo-icon"/>
         <h1 className="title">GreenCodes</h1>
-        <SocialIcons /> {/* Add social icons here */}
+        <SocialIcons />
       </div>
       
-      <Card title="Disclaimer">
+      <InfoCard title="Disclaimer">
         <p><strong>Important Disclaimer:</strong> We may earn commissions for purchases made through links on our site.</p>
         <p>Product prices and availability are accurate as of the date/time indicated and are subject to change.</p>
 
@@ -43,7 +43,7 @@ const Disclaimer = () => {
         <p>All the best,</p>
 
         <p>GreenCodes LLC</p>
-      </Card>
+      </InfoCard>
     </div>
   );
 };

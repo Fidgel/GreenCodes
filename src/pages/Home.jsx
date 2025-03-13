@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../components/Card';
 import { useNavigate } from 'react-router-dom';
-import logoImage from '../assets/logoGreenCodes1.png';
+import logoImage from '../assets/GREEN.png';
 import SocialIcons from '../components/SocialIcons';
 import { productData } from '../data/products';
 import '../styles/Home.css';

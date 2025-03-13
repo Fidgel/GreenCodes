@@ -1,4 +1,4 @@
-// Generated on 3/12/2025
+// Generated on 3/13/2025
 export const productData = [
   {
     "id": 1,
@@ -209,5 +209,35 @@ export const productData = [
     "discountPrice": "70,58€",
     "discount": "42% OFF",
     "affiliateLink": "https://amzn.to/4bJhR7Q"
+  },
+  {
+    "id": 22,
+    "title": "Govee WiFi LED Strip 5m, Smart RGB LED Streifen, App-steuerung, Musik Sync, Funktioniert mit Alexa und Google Assistant, Farbwechsel DIY Deko für Schlafzimmer Wohnzimmer",
+    "description": "Funktioniert mit Alexa und Google Assistant: Verwenden Sie einfach Gesprächsanfänger, um Ihre Lichter ein- und auszuschalten, Farben einzustellen und die Helligkeit anzupassen.",
+    "image": "https://m.media-amazon.com/images/I/71LiMrcpKZL._AC_SX679_.jpg",
+    "price": "27,22€",
+    "discountPrice": "18,14€",
+    "discount": "33% OFF",
+    "affiliateLink": "https://amzn.to/3DGOuXg"
+  },
+  {
+    "id": 23,
+    "title": "PLEGBLE Drohne mit Kamera 4K für Kinder, Mini Drohne Erwachsene, Bürstenlosem Motor FPV RC Drone mit 5G WiFi, Höhenhaltung, 3D Flip, Kopflos Modus, Flugbahn, Spielzeug Geschenke für Jungen ab 8 Jahre",
+    "description": "Ultimative Fusion: 4K-HD-Kamera, Bildstabilisierung und FPV – Diese drohne mit kamera 4k verfügt über eine 130°-Weitwinkel-4K-Linse mit einem um 90° verstellbaren Blickwinkel, sodass jeder Moment in gestochen scharfer Qualität festgehalten wird. Die reibungslose FPV-Übertragung macht diese fpv drohne ideal für Kinder von 8 bis 12 Jahren und Erwachsene, um ein immersives Flugerlebnis zu genießen.",
+    "image": "https://m.media-amazon.com/images/I/81PfC1VxSkL._AC_SX679_.jpg",
+    "price": "221,84€",
+    "discountPrice": "104,87€",
+    "discount": "53% OFF",
+    "affiliateLink": "https://amzn.to/3DFF522"
+  },
+  {
+    "id": 24,
+    "title": "BEIBYE Zwillingsrollen 2048 Hartschale Trolley Koffer Reisekoffer Taschen Gepäck in M-L-XL-Set (Grün, L)",
+    "description": "GERINGER PREIS MIT ZWEI JAHREN GARANTIE !KOFFER FÜR JEDE: Größe XL: 76x50x30 cm, Gewicht: 5,2 kg; Größe L: 67x43x26 cm, Gewicht: 4,1 kg; Größe M (Handgepäck): 55x39x23 cm; Gewicht: 3,2 kg.",
+    "image": "https://m.media-amazon.com/images/I/71qxjKspdEL._AC_SX679_.jpg",
+    "price": "80,57€",
+    "discountPrice": "60,41€",
+    "discount": "25% OFF",
+    "affiliateLink": "https://amzn.to/3FowFwu"
   }
 ];

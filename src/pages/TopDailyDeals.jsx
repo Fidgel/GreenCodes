@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../components/Card';
 import '../styles/TopDailyDeals.css';
 import { productData } from '../data/products';
-import logoImage from '../assets/logoGreenCodes1.png';
+import logoImage from '../assets/GREEN.png';
 import SocialIcons from '../components/SocialIcons';
 
 const TopDailyDeals = () => {

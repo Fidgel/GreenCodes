@@ -52,13 +52,41 @@
 
 .about-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Force column layout */
   align-items: center;
-  min-height: auto; /* Changed from 80vh to auto */
-  padding: 20px;
+  width: 100%;
+  max-width: 100%; /* Full width */
+  padding: 20px 0;
+  margin: 0;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px; /* Increase space between header and card */
+  text-align: center;
+}
+
+/* Make info-card container full width inside the about container */
+.about-container .info-card-container {
+  width: 100%;
   max-width: 800px;
-  margin: 0 auto;
-  margin-top: 0.5rem; /* Add small top margin */
+  margin: 0 auto; /* Remove top margin since we're controlling it with the header margin */
+  padding: 0 15px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 480px) {
+  .about-header {
+    margin-bottom: 20px;
+  }
+  
+  .about-container .info-card-container {
+    padding: 0 10px;
+    width: 92%;
+  }
 }
 
 .about-container .card {
